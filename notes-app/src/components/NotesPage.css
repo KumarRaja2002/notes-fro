@@ -1,0 +1,219 @@
+/* Container Styling */
+.container {
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f4f4f9, #e0e7ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column;
+  text-align: center; /* Align text in the center */
+}
+
+/* Header Styling */
+h1 {
+  font-size: 28px; /* Reduced font size for better proportion */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px; /* Adjusted margin */
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Table Styles */
+.table {
+  width: 50%;
+  max-width: 900px;
+  border-collapse: collapse;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.th {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  color: #333;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.td:hover {
+  background-color: #f4f4f9;
+}
+
+.noData {
+  text-align: center;
+  color: #999;
+  font-size: 16px;
+}
+
+/* Header Container */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.add-note-button {
+  background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient background for a more dynamic effect */
+  color: white;
+  border: none;
+  padding: 12px 24px; /* Adjusted padding for a more balanced look */
+  border-radius: 8px;
+  font-size: 16px; /* Increased font size for better readability */
+  font-weight: 600; /* Slightly bolder text for emphasis */
+  text-transform: uppercase; /* Uppercase text for a cleaner look */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for all properties */
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.3); /* Slightly larger shadow for depth */
+  margin-top: 20px;
+  letter-spacing: 1px; /* Subtle spacing between letters */
+  white-space: nowrap; /* Prevents text from wrapping to a new line */
+  text-align: center; /* Ensures the text is centered */
+  display: inline-block; /* Prevents the button from stretching across its container */
+}
+
+.add-note-button:hover {
+  background: linear-gradient(135deg, #0056b3, #003f7f); /* Darker gradient on hover for emphasis */
+  transform: translateY(-5px); /* Button lifts up on hover */
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4); /* Increase shadow on hover */
+}
+
+.add-note-button:active {
+  transform: translateY(2px); /* Slight inward movement when the button is pressed */
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); /* Reduced shadow on active state */
+}
+
+.add-note-button:focus {
+  outline: none; /* Remove focus outline */
+  box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5); /* Add glow effect on focus */
+}
+
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: 450px;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-button:hover {
+  color: #007bff;
+}
+
+.success-message {
+  margin-top: 15px;
+  color: #28a745;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet and smaller screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px; /* Smaller heading on tablets */
+    margin-bottom: 15px; /* Adjust margin */
+  }
+
+  .table {
+    width: 90%;
+    max-width: none; /* Remove max-width on smaller screens */
+  }
+
+  .add-note-button {
+    padding: 8px 16px; /* Smaller button padding */
+    font-size: 12px; /* Smaller font size */
+  }
+
+  .modal-content {
+    width: 90%; /* Full width on smaller screens */
+    padding: 15px; /* Adjust modal padding */
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px; /* Less padding on mobile */
+  }
+
+  h1 {
+    font-size: 20px; /* Further reduced font size on mobile */
+    margin-bottom: 10px; /* Reduce bottom margin */
+  }
+
+  .table {
+    width: 100%; /* Full width table on mobile */
+  }
+
+  .add-note-button {
+    padding: 8px 14px; /* Adjust button padding */
+    font-size: 12px; /* Adjust font size */
+  }
+
+  .modal-content {
+    width: 100%; /* Full width modal on mobile */
+    padding: 10px; /* Adjust padding */
+  }
+}
