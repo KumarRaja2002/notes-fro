@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../components/NotesForm.css";
+import "./NotesForm.css";
 
 const NotesForm = ({ onSubmitSuccess, editNote }) => {
   const [formData, setFormData] = useState({
